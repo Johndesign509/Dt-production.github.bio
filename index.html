@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dt Production</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="#hero">
+        <img src="images/logo.png" alt="Logo Dt Production">
+      </a>
+    </div>
+    <nav>
+      <a href="#hero">Accueil</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Bienvenue chez Dt Production</h1>
+    <p class="quote">"Design is thinking made visual." – Saul Bass</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Mon Portfolio</h2>
+    <div class="gallery">
+      <img src="images/image1.jpg" alt="Projet 1">
+      <img src="images/image2.jpg" alt="Projet 2">
+      <!-- Ajoute d'autres images ici -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email : <a href="mailto:johndesign509@gmail.com">johndesign509@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dt Production</p>
+    <a href="settings.html">Paramètres</a>
+  </footer>
+
+  <script>
+    const s = JSON.parse(localStorage.getItem('dtSettings') || '{}');
+    if (s.cit) document.querySelector('.quote').innerHTML = s.cit.replace(/\n/g, '<br>');
+    if (s.red) document.documentElement.style.setProperty('--red', s.red);
+    if (s.blue) document.documentElement.style.setProperty('--blue', s.blue);
+    if (s.bg) document.documentElement.style.setProperty('--white', s.bg);
+    if (s.mail) document.querySelector('#contact a').href = 'mailto:' + s.mail;
+  </script>
+</body>
+</html>

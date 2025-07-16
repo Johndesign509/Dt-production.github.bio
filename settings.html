@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramètres — Dt Production</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Réglages Dt Production</h2>
+    <nav>
+      <button data-section="citation">Citation</button>
+      <button data-section="couleurs">Couleurs</button>
+      <button data-section="portfolio">Portfolio</button>
+      <button data-section="contact">Contact</button>
+    </nav>
+  </div>
+  <main>
+    <section id="citation" class="section active">
+      <h3>Citation d’accueil</h3>
+      <textarea id="inputCitation">Design is thinking made visual. – Saul Bass</textarea>
+    </section>
+
+    <section id="couleurs" class="section">
+      <h3>Palette de couleurs</h3>
+      <label>Rouge : <input type="color" id="inputRed" value="#C8102E"></label>
+      <label>Bleu : <input type="color" id="inputBlue" value="#023E8A"></label>
+      <label>Fond : <input type="color" id="inputBg" value="#FFFFFF"></label>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h3>Portfolio</h3>
+      <input type="file" id="imgUpload" multiple accept="image/*">
+      <div id="previewPortfolio"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Email de contact</h3>
+      <input type="email" id="inputEmail" value="johndesign509@gmail.com">
+    </section>
+
+    <button id="btnApply">Appliquer les réglages</button>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>
